@@ -1,8 +1,8 @@
 Module 2
 CWGC
 Search Term: "Snoddy"
-Data Location: CWGCSnoddy.csv
-URL: N/A (No defined URL for specific searchs)
+Data Location: CWGCSnoddy can be found in my Research-Notebook-Demo repository @ https://github.com/rhymeswithfloral/research-notebook-demo
+Search Results URL: No defined URL for individual searches
 
 Notes:
 CWGC doesn't provide URL for specific searches because of how they built it with JavaScript. Therefore there is no unique URL for the search results.
