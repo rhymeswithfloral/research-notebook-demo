@@ -6,10 +6,14 @@ Search specifications:
 Search URL: http://eco.canadiana.ca/search?q=ottawa&field=&so=score&df=1800&dt=1900
 
 Canadiana.sh parameter: http://eco.canadiana.ca/search?q=montenegr*&field=&so=score&df=1914&dt=1918&fmt=json
-Canadiana-2.sh parameter: http://eco.canadiana.ca/search?q=ottawa&field=&so=score&df=1800&dt=1900&fmt=json
+Canadiana-2.sh parameter: http://eco.canadiana.ca/search?q=ottawa&field=&so=score&df=1914&dt=1914&fmt=json
 
 Notes:
 I followed the steps to build the folder from scratch using GitBash, CoreUtils and Wget, however when I went entered "canadiana-2.sh" into GitBash there was no response.
 I watched Profressor Graham's video about the Canadiana API excercise and attempted again using the zipped folder he created, but once again there was no response from GitBash.
 At this point I decided to start fresh and work from scratch again and created another folder for Module 2 but once again - no response.
 However, when I double clicked on "canadiana-2.sh" in my Module 2 folder the program started.
+
+Due to the fact that I was working on a machine with Windows 10, there was a period of trial and error to get through this.
+In order to make this program work what needed to be done was changing the "jq" in the Canadiana.sh file to "./jq" and using "./canadiana-2.sh" as my command in GitBash.
+I've uploaded my first attempt at editing the Canadiana shell script, which wasn't working, as well as the version with the edits that did work.

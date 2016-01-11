@@ -11,7 +11,7 @@
 
 # only code difference in this script compared to the original posted by Milligan (based on Marti, see http://ianmilligan.ca/api-example-sh/) is that http had to be added in line 30, with awk.
 
-pages=$(curl 'http://eco.canadiana.ca/search?q=ottawa&field=&so=score&df=1800&dt=1900&fmt=json' | jq '.pages')
+pages=$(curl 'http://eco.canadiana.ca/search?q=ottawa*&field=&so=score&df=1914&dt=1918&fmt=json' | ./jq '.pages')
 
 # this goes into the results and reads the value of 'pages' in each one of them.
 # it then tells us how many pages we're going to have.
@@ -22,7 +22,7 @@ echo "Pages:"$pages
 
 for i in $(seq 10)
 do
-        curl 'http://eco.canadiana.ca/search/'${i}'?q=montenegr*&field=&so=score&df=1914&dt=1918&fmt=json' | jq '.docs[] | {key}' >> results.txt
+        curl 'http://eco.canadiana.ca/search/'${i}'?q=ottawa*&field=&so=score&df=1914&dt=1918&fmt=json' | ./jq '.docs[] | {key}' >> results.txt
 done
 
 # the next two lines take the results.txt file that is quite messy and clean it up. I'll try to explain what they all mean.
