@@ -1,0 +1,49 @@
+### Module 3: RegEx ###
+
+Notepad ++
+
+Using
+RegEx ".+(to).+" got 14620 results
+
+rather than
+RegEx ".+\<to\>.+" got 12169 results
+
+~\1 - will replace everything with a "~".
+~ \1 - will insert a "~" at the beginning. The space is important.
+
+Find and Replace:
+Find: .+\<to\>.+
+Replace: ~ \1
+Results in: complete line replacement, only "~"
+
+Find: .+(to).+
+Replace: ~ \1
+Results in: partial line replacement, only "~ to"
+
+Find: .+\<to\>.+
+Replace: ~ $&
+Results in: "William~  M. Williams to David G. Burnet, November 30, 1839 60"
+
+Find: .+(to).+
+Replace: ~ $&\
+Results in: "~ William M. Williams to David G. Burnet, November 30, 1839 60"
+
+Find: \n[^~].+
+Replace:
+Results in: Notepad ++ crashing
+
+Switched to Sublime Text Editor because I was having difficulties with Notepad ++ and with Atom
+(Created new file, going through all the previous steps in this new file using Sublime, texan-correspondence-s.txt)
+
+Find: \n[^~]+$
+Replace:
+Results in: Removal of all lines of text that do not begin with ~
+
+Find: ^\n
+Replace:
+Results in: removal of all blank lines
+
+Clean-up for CSV
+
+Find: (,)( [0-9]{4})(.+)
+Replace: \2
